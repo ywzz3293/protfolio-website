@@ -313,6 +313,7 @@ section{
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
+    justify-content: center;
 }
 
 .experience-details-container{
@@ -360,7 +361,7 @@ article .icon{
 .project-title{
     margin: 1rem;
     color: black;
-    
+    text-align: center;
 }
 
 .project-btn{
@@ -412,5 +413,10 @@ footer{
     height: 5vh;
     margin: 0 1rem;
 }
+
+footer p{
+    text-align: center;
+}
+
 
 
