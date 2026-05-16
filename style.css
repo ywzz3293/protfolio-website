@@ -420,7 +420,9 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .about-containers {
