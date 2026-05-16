@@ -1,0 +1,47 @@
+[
+  {
+    "company": "OpenText",
+    "location": "Waterloo, ON",
+    "role": "Senior Software Engineer (Full Stack)",
+    "period": "Apr 2025 – Present",
+    "highlights": [
+      "Built a Copilot subagent workflow that pulls Jira tickets and related documents, filters them with team domain knowledge, runs AI-assisted log analysis, and sends RCA drafts to customer support — being shaped into a VM/cloud-hosted web service.",
+      "Build and maintain C++ backend services and frontend administrative tools used around business-critical workflows.",
+      "Work with architects and product managers to sort out design dependencies before implementation; authored high-level and low-level design documents for a monitoring system using Grafana and Prometheus."
+    ],
+    "tags": ["C++", "AI/ML", "Grafana", "Prometheus", "TypeScript", "Angular"]
+  },
+  {
+    "company": "Ansys (Synopsys)",
+    "location": "Vancouver, BC",
+    "role": "R&D Software Engineer II",
+    "period": "Oct 2021 – Apr 2025",
+    "highlights": [
+      "Built analytics algorithms in modern C++ for GPU architecture evaluation, with strict latency and throughput targets on large datasets.",
+      "Refactored 1,500+ source files into a decoupled MVC architecture using C++17 OOP patterns; took ownership of untouched modules and reduced regressions and bugs by 60%.",
+      "Wrote automated regression and performance tests in Python and tracked down multi-platform defects across large codebases."
+    ],
+    "tags": ["C++17", "Python", "MVC Architecture", "Performance Optimization", "GPU Analytics"]
+  },
+  {
+    "company": "LifeWorks (Telus Health)",
+    "location": "Montreal, QC",
+    "role": "Software Analyst (Backend)",
+    "period": "Jun 2020 – Jun 2021",
+    "highlights": [
+      "Reduced system processing time by 15% through targeted algorithmic optimizations.",
+      "Led code reviews during production migration to C#/.NET Core."
+    ],
+    "tags": ["C#", ".NET Core", "Backend", "Performance"]
+  },
+  {
+    "company": "Autolog",
+    "location": "Montreal, QC",
+    "role": "Computer Vision Engineer",
+    "period": "Jan 2019 – Feb 2020",
+    "highlights": [
+      "Wrote a multi-threaded object detection algorithm in C++ for real-time throughput in an industrial production environment."
+    ],
+    "tags": ["C++", "OpenCV", "Multi-threading", "Real-time Systems"]
+  }
+]

@@ -1,291 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Protfolio</title>
-    <link rel = "stylesheet" href = "style.css"/>
-    <link rel = "stylesheet" href = "mediaqueries.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weijie Shen | Senior Software Engineer</title>
+
+  <!-- SEO meta -->
+  <meta name="description" content="Weijie Shen — Senior Software Engineer with 6+ years in C++ backend systems, AI automation, and performance-critical applications." />
+  <meta name="keywords" content="Weijie Shen, Senior Software Engineer, C++, Backend, AI Automation, Portfolio" />
+  <meta name="author" content="Weijie Shen" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Weijie Shen | Senior Software Engineer" />
+  <meta property="og:description" content="6+ years in C++ backend systems, AI automation, and performance-critical applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ywzz3293.github.io/protfolio-website/" />
+  <meta property="og:image" content="./assets/1525125539448.jpg" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-    <nav id = "desktop-nav">
-        <div class ="logo"> Weijie Shen</div>
-        <div>
-            <ul class ="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contacts</a></li>
-            </ul>
+
+  <!-- ===== DESKTOP NAV ===== -->
+  <nav id="desktop-nav">
+    <div class="logo">Weijie Shen</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#ai-automation">AI</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </nav>
+
+  <!-- ===== MOBILE NAV ===== -->
+  <nav id="hamburger-nav">
+    <div class="logo">Weijie Shen</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#ai-automation" onclick="toggleMenu()">AI</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+    <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/1525125539448.jpg" alt="Weijie Shen profile photo" loading="lazy" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Weijie Shen</h1>
+      <p class="section__text__p2">Senior Software Engineer</p>
+      <p class="section__text__p3">
+        <span id="typewriter"></span><span class="cursor">|</span>
+      </p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/cv.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png"
+             alt="LinkedIn profile"
+             class="icon"
+             loading="lazy"
+             onclick="location.href='https://www.linkedin.com/in/weijie-shen-0a5668160/'" />
+        <img src="./assets/github.png"
+             alt="GitHub profile"
+             class="icon"
+             loading="lazy"
+             onclick="location.href='https://github.com/ywzz3293/'" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <p class="section__text_p1 fade-in">Get to know more</p>
+    <h1 class="title fade-in">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/mmexport1688352387222.jpg"
+             alt="Weijie Shen"
+             class="about-pic"
+             loading="lazy" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container fade-in">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" loading="lazy" />
+            <h3>Experience</h3>
+            <p>6+ Years<br />Senior SDE</p>
+          </div>
+          <div class="details-container fade-in">
+            <img src="./assets/education.png" alt="Education icon" class="icon" loading="lazy" />
+            <h3>Education</h3>
+            <p>M.Eng<br />Polytechnique Montréal</p>
+          </div>
         </div>
+        <div class="text-container fade-in">
+          <p>
+            C++-focused software engineer with 6+ years across backend systems, analytics tooling, and performance-sensitive applications. Main stack is C++11/14/17/20, with Python and full-stack work when the product needs it. Most projects have involved code that has to stay fast, testable, and maintainable across large codebases.
+          </p>
+          <p style="margin-top: 0.8rem;">
+            Currently at <strong>OpenText</strong> building AI-assisted RCA automation that turns Jira tickets and logs into actionable support drafts — eliminating developer involvement in common support cases. Open to backend systems, AI tooling, or performance-engineering roles.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Scroll down" class="icon arrow" onclick="location.href='#experience'" loading="lazy" />
+  </section>
+
+  <!-- ===== EXPERIENCE (timeline — rendered by JS from data/experience.json) ===== -->
+  <section id="experience">
+    <p class="section__text_p1 fade-in">Career</p>
+    <h1 class="title fade-in">Work Experience</h1>
+    <div class="timeline" id="timeline-container">
+      <!-- Populated by script.js -->
+    </div>
+    <img src="./assets/arrow.png" alt="Scroll down" class="icon arrow" onclick="location.href='#ai-automation'" loading="lazy" />
+  </section>
+
+  <!-- ===== AI & AUTOMATION ===== -->
+  <section id="ai-automation">
+    <p class="section__text_p1 fade-in">Highlight</p>
+    <h1 class="title fade-in">AI &amp; Automation</h1>
+    <div class="ai-container fade-in">
+      <div class="ai-card">
+        <div class="ai-badge-large">AI</div>
+        <h2>RCA Automation Workflow</h2>
+        <p class="ai-company">OpenText &mdash; Apr 2025 &ndash; Present</p>
+        <p class="ai-description">
+          Built a Copilot subagent workflow that automates root-cause analysis for production issues. The system pulls Jira tickets and related documentation, filters context with team domain knowledge, runs AI-assisted log analysis, and sends structured RCA draft reports directly to customer support. Currently being evolved into a VM/cloud-hosted web service so support teams can independently handle common cases without waiting on engineers.
+        </p>
+        <div class="ai-flow">
+          <div class="ai-flow-step">
+            <span class="flow-icon">📋</span>
+            <span>Jira Tickets</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="ai-flow-step">
+            <span class="flow-icon">📚</span>
+            <span>Doc Retrieval</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="ai-flow-step">
+            <span class="flow-icon">🤖</span>
+            <span>AI Log Analysis</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="ai-flow-step">
+            <span class="flow-icon">📝</span>
+            <span>RCA Draft</span>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div class="ai-flow-step">
+            <span class="flow-icon">🌐</span>
+            <span>Cloud Web Service</span>
+          </div>
+        </div>
+        <div class="ai-tech-tags">
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">LLM / Prompt Engineering</span>
+          <span class="skill-tag">Jira API</span>
+          <span class="skill-tag">AI Workflow Automation</span>
+          <span class="skill-tag">Grafana</span>
+          <span class="skill-tag">Prometheus</span>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Scroll down" class="icon arrow" onclick="location.href='#skills'" loading="lazy" />
+  </section>
+
+  <!-- ===== SKILLS (rendered by JS from data/skills.json) ===== -->
+  <section id="skills">
+    <p class="section__text_p1 fade-in">What I work with</p>
+    <h1 class="title fade-in">Technical Skills</h1>
+    <div class="skills-container" id="skills-container">
+      <!-- Populated by script.js -->
+    </div>
+    <img src="./assets/arrow.png" alt="Scroll down" class="icon arrow" onclick="location.href='#projects'" loading="lazy" />
+  </section>
+
+  <!-- ===== PROJECTS (rendered by JS from data/projects.json) ===== -->
+  <section id="projects">
+    <p class="section__text_p1 fade-in">Browse my recent</p>
+    <h1 class="title fade-in">Projects</h1>
+    <div class="projects-grid" id="projects-container">
+      <!-- Populated by script.js -->
+    </div>
+    <img src="./assets/arrow.png" alt="Scroll down" class="icon arrow" onclick="location.href='#contact'" loading="lazy" />
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <p class="section__text_p1 fade-in">Get in touch</p>
+    <h1 class="title fade-in">Contact Me</h1>
+    <div class="contact-info-upper-container fade-in">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" loading="lazy" />
+        <p><a href="mailto:shenweijie98@gmail.com">shenweijie98@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" loading="lazy" />
+        <p><a href="https://www.linkedin.com/in/weijie-shen-0a5668160/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/github.png" alt="GitHub" class="icon contact-icon" loading="lazy" />
+        <p><a href="https://github.com/ywzz3293" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#ai-automation">AI</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
-    <nav id = hamburger-nav>
-        <div class ="logo"> Weijie SHEN</div>
-        <div class = "hamburger-menu">
-            <div class = "hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class = "menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#project" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contacts</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id = "profile">
-        <div class = "section__pic-container">
-            <img src="./assets/1525125539448.jpg" alt="profile-pic">
-        </div>
-        <div class = "section__text">
-            <p class = "section__text__p1">Hello, I'm</p>
-            <h1 class = "title"> Weijie Shen</h1>
-            <p class = "section__text__p2"> Software Development Engineer</p>
-            <div class = "btn-container">
-                <button class = "btn btn-color-2" onclick="window.open('./assets/CV_Weijie_Shen.pdf')">
-                    Download CV
-                </button>
-                <button class = "btn btn-color-1" onclick="location.href ='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id = "socials-container">
-                <img src="./assets/linkedin.png"
-                 alt="My linkedin profile"
-                 class = "icon" 
-                 onclick="location.href = 'https://www.linkedin.com/in/weijie-shen-0a5668160/'">
-                 <img src="./assets/github.png" 
-                 alt="My github profile"
-                 class = "icon" 
-                 onclick="location.href = 'https://github.com/ywzz3293/'">
-            </div>
-        </div>
-    </section> 
-    <section id = "about">
-        <p class = "section__text_p1">Get to know more</p>
-        <h1 class = "title">About me</h1>
-        <div class = "section-container">
-            <div class = section__pic-container>
-                <img src="./assets/mmexport1688352387222.jpg" 
-                alt="profile-pic"
-                class = "about-pic"/>
-            </div>
-            <div class = "about-details-container">
-                <div class = "about-containers">
-                    <div class = "details-container">
-                        <img src="./assets/experience.png"
-                        alt="Experience icon"
-                        class = "icon"/>
-                        <h3>Experience</h3>
-                        <p> 5+ year <br> SDE</p>
-                    </div>
-                    <div class = "details-container">
-                        <img src="./assets/education.png"
-                        alt="Education icon"
-                        class = "icon"/>
-                        <h3>Education</h3>
-                        <p> B.Sc <br> M.Sc</p>
-                    </div>
-                </div>
-                <div class = "text-container">
-                    <p>
-                        I am a highly motivated and dedicated software developer with a passion for learning and problem-solving. I thrive in challenging environments and have a proven track record of quickly adapting to new systems and technologies. As a team, I am confident in my ability to work effectively under pressure and contribute to a dynamic and productive work environment. I am open to relocating for the right opportunity
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png"
-         alt="Arrow icon"
-         class = "icon arrow"
-         onclick="location.href='./#experience'">
-    </section>
-    <section id="experience">
-        <p class = "section__text_p1">Explore My</p>
-        <h1 class = "title"> Experience</h1>
-        <div class = "experience-details-container">
-            <div class = "about-containers">
-                <div class = "details-container">
-                    <h2 class = "experience-subtitle">
-                        Work Experience 
-                    </h2>
-                    <div class = "article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class = "icon">
-                            <div>
-                                <h3>Ansys</h3>
-                                <p>2 years +</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class = "icon">
-                            <div>
-                                <h3>Navblue</h3>
-                                <p>6 months</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class = "icon">
-                            <div>
-                                <h3>LifeWorks</h3>
-                                <p>1 year</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class = "icon">
-                            <div>
-                                <h3>Autolog</h3>
-                                <p>1 year</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class = "details-container">
-                    <h2 class = "experience-subtitle">
-                        Skills 
-                    </h2>
-                    <div class = "article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class = "icon">
-                            <div>
-                                <h3>PROGRAMMING LANGUAGE</h3>
-                                <p>C++, C#, Python, Js, .net, java, rust, go</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class = "icon">
-                            <div>
-                                <h3>PLATFORM </h3>
-                                <p>Windows, Linux, MacOS</p>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon" class = "icon">
-                            <div>
-                                <h3>LIBRARY</h3>
-                                <p>OpenCV, OpenGL, SQL, MongoDB</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png"
-        alt="Arrow icon"
-        class = "icon arrow"
-        onclick="location.href='./#projects'">
-    </section>
-    <section id = "projects">
-        <p class = "section__text_p1">Browse my recent</p>
-        <h1 class = "title"> Projects</h1>
-        <div class = "experience-details-container">
-            <div class = "about-containers">
-                <div class = "details-container color-container">
-                    <div class = "article-container">   
-                        <img src="./assets/b4939e93d18ff65cfdd8b8baf148989d.gif"
-                        alt="project 1"
-                        class = "project-img">
-                    </div>
-                    <h2 class = "experience-sub-title project-title"> Protfolio Website</h2>
-                    <div class = "btn-container">
-                        <button class = "btn btn-color-2 project-btn"
-                        onclick="location.href = 'https://github.com/ywzz3293/protfolio-website'">
-                        Github
-                        </button>
-                        <!--
-                        <button class = "btn btn-color-2 project-btn"
-                        onclick="location.href = 'https://github.com/ywzz3293/protfolio-website'">
-                        Live Demo
-                        </button>
-                        -->
-                    </div>
-                </div>
-                <div class = "details-container color-container">
-                    <div class = "article-container">
-                        <img src="./assets/Simulator Screenshot - iPhone 15 - 2024-03-08 at 21.24.09.png"
-                        alt="project 2"
-                        class = "project-img">
-                    </div>
-                    <h2 class = "experience-sub-title project-title"> Expense Tracker</h2>
-                    <div class = "btn-container">
-                        <button class = "btn btn-color-2 project-btn"
-                        onclick="location.href = 'https://github.com/ywzz3293/ExpenseTracker'">
-                        Github
-                        <!--
-                        </button>
-                        <button class = "btn btn-color-2 project-btn"
-                        onclick="location.href = 'https://github.com/ywzz3293/ExpenseTracker'">
-                        Live Demo
-                        </button>
-                        -->
-                    </div>
-                </div>
-                
-                <!--
-                <div class = "details-container color-container">
-                    <div class = "article-container">
-                        <img src="./assets/project-3.png"
-                        alt="project 3"
-                        class = "project-img">
-                    </div>
-                    <h2 class = "experience-sub-title project-title"> Project Three</h2>
-                    <div class = "btn-container">
-                        <button class = "btn btn-color-2 project-btn"
-                        onclick="location.href = 'https://github.com/ywzz3293/protfolio-website'">
-                        Github
-                        </button>
-                        <button class = "btn btn-color-2 project-btn"
-                        onclick="location.href = 'https://github.com/ywzz3293/protfolio-website'">
-                        Live Demo
-                        </button>
-                    </div>
-                </div>
-                -->
-            </div>
-        </div>
-        <img src="./assets/arrow.png"
-        alt="Arrow icon"
-        class = "icon arrow"
-        onclick="location.href='./#contact'">
-    </section>
-    <section id = "contact">
-        <p class = "section__text_p1">Get in touch</p>
-        <h1 class = "title">Contact Me</h1>
-        <div class = "contact-info-upper-container">
-            <div class = "contact-info-container">
-                <img src="./assets/email.png"
-                 alt="email icon"
-                 class = "icon contact-icon email-icon"/>
-                <p>
-                    <a href="mailto:shenweijie98@gmail.com">
-                        shenweijie98@gmail.com</a>
-                </p>
-            </div>
-            <div class = "contact-info-container">
-                <img src="./assets/linkedin.png"
-                 alt="linkedin icon"
-                 class = "icon contact-icon"/>
-                <p>
-                    <a href="https://www.linkedin.com/in/weijie-shen-0a5668160/">
-                        LinkedIn</a>
-                </p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class = "nav-links-container">
-                <ul class ="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contacts</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!--<p>Copyright &#169; 2024</p>-->
-    </footer>
-    <script src = "script.js"></script>
+    <p class="footer-copy">Copyright &copy; 2026 Weijie Shen</p>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" aria-label="Back to top" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+  <script src="script.js"></script>
 </body>
 </html>

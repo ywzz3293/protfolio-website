@@ -1,0 +1,39 @@
+{
+  "Languages": [
+    "C++ (C++11/14/17/20)",
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "Java",
+    "C#",
+    "Rust",
+    "Angular"
+  ],
+  "Tools & Practices": [
+    "Git",
+    "Jira",
+    "Confluence",
+    "VS Code",
+    "SonarQube",
+    "CI/CD",
+    "Agile / Scrum",
+    "Test Automation",
+    "Performance Profiling",
+    "OOP & Design Patterns",
+    "Data Structures & Algorithms"
+  ],
+  "AI & Monitoring": [
+    "GitHub Copilot",
+    "LLM / Prompt Engineering",
+    "Grafana",
+    "Prometheus",
+    "AI Workflow Automation"
+  ],
+  "Cloud & Infra": [
+    "AWS EC2",
+    "AWS S3",
+    "AWS RDS",
+    "GitHub Actions",
+    "GitHub Pages"
+  ]
+}

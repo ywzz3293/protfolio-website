@@ -1,0 +1,172 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small#2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{xcolor}  % 这个宏包可以用于定义颜色
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,      
+  urlcolor=cyan,
+  citecolor=blue,
+}
+
+% 自定义的 \href 命令
+\renewcommand{\href}[2]{\textcolor{blue}{\underline{#2}}}
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth} {l@{\extracolsep{\fill}}r}
+  \textbf{\Large Weijie Shen} & \href{mailto:shenweijie98@gmail.com}{shenweijie98@gmail.com} $|$ \href{https://github.com/ywzz3293}{GitHub} \\
+  +1(514)6904706 & \href{https://www.linkedin.com/in/weijie-shen-0a5668160/}{LinkedIn} $|$ \href{https://ywzz3293.github.io/protfolio-website/}{Portfolio} \\
+\end{tabular*}
+
+%----------Summary-----------------
+\section{Summary}
+\small
+{C++-focused software engineer with 6+ years across backend systems, analytics tooling, and performance-sensitive applications. Main stack is C++11/14/17/20, with Python and some fullstack work when the product needs it. Most projects have involved code that has to stay fast, testable, and maintainable across large codebases.}
+ 
+ 
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+ 
+\resumeSubheading
+{OpenText}{Waterloo, ON}
+{Senior Software Engineer (Full Stack)}{Apr 2025 -- Present}
+\resumeItemListStart
+  \resumeItem{AI Log Analysis \& RCA Automation}
+    {Built a Copilot subagent workflow that pulls Jira tickets and related documents, filters them with team domain knowledge, runs AI-assisted log analysis, and sends RCA drafts to customer support. It is being shaped into a VM/cloud-hosted web service so support can handle common cases without waiting on developers.}
+  \resumeItem{System Development}
+    {Build and maintain C++ backend services and frontend administrative tools used around business-critical workflows.}
+  \resumeItem{Design Collaboration}
+    {Work with architects and product managers to sort out design dependencies before implementation. Complete high level and low level design document for monitoring system using grafana and prometheus.}
+\resumeItemListEnd
+ 
+ 
+\resumeSubheading
+{Ansys (Synopsys)}{Vancouver, BC}
+{R\&D Software Engineer II}{Oct 2021 -- Apr 2025}
+\resumeItemListStart
+  \resumeItem{Analytics Algorithm Development in C++}
+    {Built analytics algorithms in modern C++ for GPU architecture evaluation, with strict latency and throughput targets on large datasets.}
+  \resumeItem{Architecture \& Code Quality}
+    {Refactored 1.5k source files into a decoupled MVC architecture using C++17 OOP patterns; Take ownership of untouched module and reduced regressions and bugs by 60\%.}
+  \resumeItem{Automated Testing \& Cross-Platform Debugging}
+    {Wrote automated regression and performance tests in Python and tracked down multi-platform defects across large codebases.}
+  \resumeItemListEnd
+ 
+\resumeSubheading
+{LifeWorks (Telus Health)}{Montreal, QC}
+{Software Analyst (Backend)}{Jun 2020 -- Jun 2021}
+\resumeItemListStart
+  \resumeItem{Performance Optimization \& Code Quality}
+    {Reduced system processing time by 15\% through targeted algorithmic optimizations; led code reviews during production migration to C\#/.NET Core.}
+  \resumeItemListEnd
+ 
+\resumeSubheading
+{Autolog}{Montreal, QC}
+{Computer Vision Engineer}{Jan 2019 -- Feb 2020}
+\resumeItemListStart
+  \resumeItem{Object Detection in C++}
+    {Wrote a multi-threaded object detection algorithm in C++ for real-time throughput.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+ 
+%---------- Technical Skills ----------
+\section{Technical Skills}
+\resumeSubHeadingListStart
+\resumeSubItem{Languages \& Standards}
+{C++ (C++11/14/17/20), Python, TypeScript, JavaScript, Angular, Java, C\#, Rust; OOP, design patterns, data structures \& algorithms}
+\resumeSubItem{Tools \& Practices}
+{Git, Bitbucket, Jira, Bitbucke, Confluence, MS Visual Studio, VS Code, SonarQube, GitHub CoPilot, CI\/CD, Agile/Scrum, test automation, performance profiling}
+\resumeSubHeadingListEnd
+ 
+%---------- Projects ----------
+\section{Technical Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{Multithreaded Server (Windows \& Linux)}
+{C++ server built to run the same way on Windows and Linux, with unit and integration tests covering both platforms.}
+\resumeSubItem{AWS Inventory Management}
+{Next.js/Node.js inventory application with Redux caching and AWS EC2/S3/RDS for persistence. Added automation around data sync and workflow-heavy tasks.}
+\resumeSubHeadingListEnd
+ 
+%---------- Education ----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{École Polytechnique de Montréal}{Montreal, QC}
+{Master of Engineering}{2018}
+\resumeSubHeadingListEnd
+ 
+\end{document}

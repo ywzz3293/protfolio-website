@@ -1,0 +1,38 @@
+[
+  {
+    "title": "AI Log Analysis & RCA Automation",
+    "description": "A Copilot subagent workflow that pulls Jira tickets and related documents, filters them with team domain knowledge, runs AI-assisted log analysis, and generates RCA draft reports for customer support — reducing developer involvement in common support cases.",
+    "tags": ["AI/ML", "C++", "Jira API", "LLM", "Automation"],
+    "github": "",
+    "demo": "",
+    "badge": "AI",
+    "image": "./assets/ai-rca-placeholder.png"
+  },
+  {
+    "title": "Multithreaded Server (Windows & Linux)",
+    "description": "Cross-platform C++ server built to run identically on Windows and Linux, with a comprehensive suite of unit and integration tests covering both platforms. Demonstrates portable systems programming with modern C++.",
+    "tags": ["C++17", "Multi-threading", "Windows", "Linux", "Unit Testing"],
+    "github": "https://github.com/ywzz3293",
+    "demo": "",
+    "badge": "",
+    "image": ""
+  },
+  {
+    "title": "AWS Inventory Management",
+    "description": "Full-stack inventory application with Next.js/Node.js frontend, Redux state management, and AWS EC2/S3/RDS for persistence. Includes automated data synchronization and workflow automation features.",
+    "tags": ["Next.js", "Node.js", "Redux", "AWS EC2", "AWS S3", "AWS RDS"],
+    "github": "https://github.com/ywzz3293",
+    "demo": "",
+    "badge": "",
+    "image": ""
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "This portfolio site — built as a data-driven static site with JSON content files, GitHub Actions CI/CD, and GitHub Pages hosting. Features dark mode, scroll animations, and a timeline-style experience section.",
+    "tags": ["HTML/CSS", "JavaScript", "GitHub Actions", "GitHub Pages", "CI/CD"],
+    "github": "https://github.com/ywzz3293/protfolio-website",
+    "demo": "https://ywzz3293.github.io/protfolio-website/",
+    "badge": "",
+    "image": ""
+  }
+]

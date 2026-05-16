@@ -1,95 +1,128 @@
-@media screen and (max-width: 1400px){
-    #profile{
-        height: 83vh;
-        margin-bottom: 6rem;
-    }
-    .about-containers{
-        flex-wrap: wrap;
-    }
+/* ============================================
+   RESPONSIVE — tablet (≤ 1200px)
+   ============================================ */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 4rem 5% 3rem;
+  }
+
+  #profile {
+    flex-direction: column;
+    gap: 2rem;
+    min-height: auto;
+    padding: 5rem 5% 3rem;
+    text-align: center;
+  }
+
+  .section__pic-container {
+    width: 260px;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  /* Timeline collapses to single column */
+  .timeline::before {
+    left: 1.5rem;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 3.5rem;
+  }
+
+  .timeline-dot {
+    left: 1.5rem;
+  }
+
+  /* AI flow wraps */
+  .ai-flow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
-@media screen and (max-width: 1200px){
-    #desktop-nav{
-        display: none;
-    }
-    #hamburger-nav{
-        display: flex;
-    }
-    #experience,.experience-details-container{
-        margin-top: 2rem;
-    }
+/* ============================================
+   RESPONSIVE — mobile (≤ 768px)
+   ============================================ */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
 
-    #profile,.section-container{
-        display: block;
-    }
-    .arrow{
-        display: none;
-    }
-    sections,.section-container{
-        height: fit-content;
-    }
-    section{
-        margin: 0 5%;
-    }
-    section__pic-container{
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
-    }
-    .about-containers{
-        margin-top: 0;
-    }
+  .section__text__p2 {
+    font-size: 1.3rem;
+  }
 
+  .about-containers {
+    flex-direction: column;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+  }
+
+  footer .nav-links {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
 }
 
-@media screen and (max-width: 600px){
-    #contact,footer{
-        height: 40vh;
-    }
-    #profile{
-        height: 83vh;
-        margin-bottom: 0 ;
-    }
-    article{
-        font-size: 1rem;
-    }
-    footer nav{
-        height: fit-content;
-        margin-bottom: 2rem;
-    }
-    .about-containers, .contact-info-upper-container, .btn-container
-    {
-        flex-wrap: wrap;
-    }
-    .contact-info-container{
-        margin: 0;
-    }
-    .contact-info-container p,.nav-links li a{
-        font-size: 1rem;
-    }
-    .experience-sub-title{
-        font-size: 1.25rem;
-    }
-    .logo{
-        font-size: 1.5rem;
-    }
-    .nav-links{
-        flex-direction: column;
-        gap:0.5rem;
-        text-align: center;
-    }
-    .section__pic-container{
-        width: auto;
-        height: 46ch;
-        justify-content: center;
-    }
-    .secion__text-p2{
-        font-size: 1.25rem;
-    }
-    .title{
-        font-size: 2rem;
-    }
-    .text-container{
-        text-align: justify;
-    }
+/* ============================================
+   RESPONSIVE — small mobile (≤ 480px)
+   ============================================ */
+@media screen and (max-width: 480px) {
+  section {
+    padding: 3rem 1.2rem 2rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 14rem;
+  }
+
+  .timeline-card {
+    padding: 1rem;
+  }
+
+  .ai-card {
+    padding: 1.5rem 1rem;
+  }
 }
