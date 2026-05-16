@@ -31,7 +31,7 @@
     "description": "This portfolio site — built as a data-driven static site with JSON content files, GitHub Actions CI/CD, and GitHub Pages hosting. Features dark mode, scroll animations, and a timeline-style experience section.",
     "tags": ["HTML/CSS", "JavaScript", "GitHub Actions", "GitHub Pages", "CI/CD"],
     "github": "https://github.com/ywzz3293/protfolio-website",
-    "demo": "https://ywzz3293.github.io/protfolio-website/",
+    "demo": "",
     "badge": "",
     "image": ""
   }
