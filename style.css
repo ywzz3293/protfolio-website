@@ -280,10 +280,10 @@ section:nth-child(even) {
   flex-shrink: 0;
 }
 
-.section__pic-container img {
+.section__pic-container .profile-pic-bg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background: url('./assets/1525125539448.PNG') center top / cover no-repeat;
 }
 
 .section__text {
@@ -346,6 +346,59 @@ section:nth-child(even) {
   filter: invert(1) brightness(0.85);
 }
 
+/* Social text links (replaces social icon imgs) */
+.social-text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 1rem;
+  border: 0.1rem solid var(--color-border);
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-text-link:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+/* Emoji icons in details cards */
+.details-icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+/* Emoji icons in contact section */
+.contact-icon-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* CSS scroll-down arrow (replaces arrow.png img) */
+.scroll-arrow {
+  position: absolute;
+  right: -4rem;
+  bottom: 2rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--color-text-muted);
+  transition: color 300ms ease, transform 300ms ease;
+  user-select: none;
+  line-height: 1;
+}
+
+.scroll-arrow:hover {
+  color: var(--color-accent);
+  transform: translateY(3px);
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -387,13 +440,6 @@ section:nth-child(even) {
   background: var(--color-accent);
   border-color: var(--color-accent);
   color: #fff;
-}
-
-.arrow {
-  position: absolute;
-  right: -4rem;
-  bottom: 2rem;
-  cursor: pointer;
 }
 
 /* ============================================
