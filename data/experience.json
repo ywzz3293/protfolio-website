@@ -1,9 +1,17 @@
 [
   {
+    "company": "Autodesk",
+    "location": "Toronto, ON",
+    "role": "Senior Software Developer",
+    "period": "Aug 2026 – Present",
+    "highlights": [],
+    "tags": []
+  },
+  {
     "company": "OpenText",
     "location": "Waterloo, ON",
     "role": "Senior Software Engineer (Full Stack)",
-    "period": "Apr 2025 – Present",
+    "period": "Apr 2025 – Jul 2026",
     "highlights": [
       "Built a Copilot subagent workflow that pulls Jira tickets and related documents, filters them with team domain knowledge, runs AI-assisted log analysis, and sends RCA drafts to customer support — being shaped into a VM/cloud-hosted web service.",
       "Build and maintain C++ backend services and frontend administrative tools used around business-critical workflows.",
